@@ -1,7 +1,5 @@
-linenoise_example: linenoise.h linenoise.c
+CC = gcc
+CFLAGS = -fPIC -shared
 
-linenoise_example: linenoise.c example.c
-	$(CC) -Wall -W -Os -g -o linenoise_example linenoise.c example.c
-
-clean:
-	rm -f linenoise_example
+all:
+	$(CC) $(CFLAGS) linenoise.c -o linenoise.so

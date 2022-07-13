@@ -2,3 +2,5 @@ linenoise_example
 *.dSYM
 history.txt
 *.so
+*.a
+*.o

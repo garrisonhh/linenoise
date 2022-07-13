@@ -1,5 +1,3 @@
-CC = gcc
-CFLAGS = -fPIC -shared
-
 all:
-	$(CC) $(CFLAGS) linenoise.c -o linenoise.so
+	gcc -c -o linenoise.o linenoise.c
+	ar rcs linenoise.a linenoise.o
